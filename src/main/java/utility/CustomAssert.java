@@ -39,4 +39,10 @@ public class CustomAssert extends SoftAssert {
         customAssert.fail(message);
         customAssert.assertAll();
     }
+
+    public static void isTrue(boolean condition) {
+        CustomAssert customAssert = new CustomAssert();
+        customAssert.assertTrue(condition);
+        customAssert.assertAll();
+    }
 }

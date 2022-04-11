@@ -39,7 +39,8 @@ public class NavigationBarPom extends BasePageObject {
         clickElement(MEDIA_BUTTON);
     }
 
-    public void clickCareersButton() {
+    public CareersPom clickCareersButton() {
         clickElement(CAREERS_BUTTON);
+        return new CareersPom(webDriver);
     }
 }

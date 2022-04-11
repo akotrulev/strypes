@@ -5,12 +5,12 @@ import ui.pom.CareersPom;
 import ui.pom.HomePagePom;
 import utility.CustomAssert;
 
-public class HomePageTest extends BaseUiTest {
+public class CareersPageTest extends BaseUiTest {
 
     @Test
-    public void userIsAbleToNavigateToCareersPage() {
+    public void userIsAbleToNavigateToViewAVacancy() {
         HomePagePom homePagePom = new HomePagePom(startDriver());
         CareersPom careersPom = homePagePom.navigationBarPom.clickCareersButton();
-        CustomAssert.isTrue(careersPom.getVacanciesCount()>=0);
+        careersPom.getVacanciesList()
     }
 }
