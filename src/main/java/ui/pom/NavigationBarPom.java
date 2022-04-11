@@ -2,16 +2,17 @@ package ui.pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import ui.pom.career.CareersPom;
 
 public class NavigationBarPom extends BasePageObject {
 
-    public final static By HOME_BUTTON = By.xpath("//a[@class='elementor-item elementor-item-active menu-link' and contains(text(), 'Home')]");
-    public final static By ABOUT_BUTTON = By.xpath("//a[@class='elementor-item menu-link has-submenu' and contains(text(), 'About')]");
-    public final static By SERVICES_BUTTON = By.xpath("//a[@class='elementor-item menu-link has-submenu' and contains(text(), 'Services')]");
-    public final static By CUSTOMERS_BUTTON = By.xpath("//a[@class='elementor-item elementor-item-active menu-link' and contains(text(), 'Customers')]");
-    public final static By NEARSURANCE_BUTTON = By.xpath("//a[@class='elementor-item elementor-item-active menu-link' and contains(text(), 'Nearsurance')]");
-    public final static By MEDIA_BUTTON = By.xpath("//a[@class='elementor-item menu-link' and contains(text(), 'Media')]");
-    public final static By CAREERS_BUTTON = By.xpath("//a[@class='elementor-item menu-link' and contains(text(), 'Careers')]");
+    protected final static By HOME_BUTTON = By.xpath("//a[@class='elementor-item elementor-item-active menu-link' and contains(text(), 'Home')]");
+    protected final static By ABOUT_BUTTON = By.xpath("//a[@class='elementor-item menu-link has-submenu' and contains(text(), 'About')]");
+    protected final static By SERVICES_BUTTON = By.xpath("//a[@class='elementor-item menu-link has-submenu' and contains(text(), 'Services')]");
+    protected final static By CUSTOMERS_BUTTON = By.xpath("//a[@class='elementor-item elementor-item-active menu-link' and contains(text(), 'Customers')]");
+    protected final static By NEARSURANCE_BUTTON = By.xpath("//a[@class='elementor-item elementor-item-active menu-link' and contains(text(), 'Nearsurance')]");
+    protected final static By MEDIA_BUTTON = By.xpath("//a[@class='elementor-item menu-link' and contains(text(), 'Media')]");
+    protected final static By CAREERS_BUTTON = By.xpath("//a[@class='elementor-item menu-link' and contains(text(), 'Careers')]");
     public NavigationBarPom(WebDriver driver) {
         super(driver);
     }

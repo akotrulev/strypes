@@ -101,9 +101,8 @@ public class BasePageObject {
         webDriverWait.until(ExpectedConditions.visibilityOf(webElement));
     }
 
-    public void addCookieToBrowser(Cookie cookie) {
-        goToBasePage();
-        webDriver.manage().addCookie(cookie);
+    public void addCookieToBrowser(List<Cookie> cookies) {
+        cookies.forEach(cookie ->  webDriver.manage().addCookie(cookie));
         webDriver.navigate().refresh();
     }
 

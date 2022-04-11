@@ -1,7 +1,7 @@
 package ui;
 
 import org.testng.annotations.Test;
-import ui.pom.CareersPom;
+import ui.pom.career.CareersPom;
 import ui.pom.HomePagePom;
 import utility.CustomAssert;
 
