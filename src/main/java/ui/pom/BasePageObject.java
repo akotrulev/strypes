@@ -39,6 +39,10 @@ public class BasePageObject {
         return element.getText().trim();
     }
 
+    protected String getElementText(By locator) {
+        return getElementText(findElementByLocator(locator));
+    }
+
     protected void writeText(WebElement element, String text) {
         Reporter.log("Clearing text from " + element.getTagName());
         element.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
@@ -48,9 +52,17 @@ public class BasePageObject {
         element.sendKeys(text);
     }
 
+    protected void writeText(By locator, String text) {
+        writeText(findElementByLocator(locator), text);
+    }
+
     protected void clickElement(WebElement element) {
         Reporter.log("Clicking element " + element.getTagName());
         element.click();
+    }
+
+    protected void clickElement(By locator) {
+        clickElement(findElementByLocator(locator));
     }
 
     public void quitDriver() {
