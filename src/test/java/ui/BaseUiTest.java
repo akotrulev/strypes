@@ -18,12 +18,12 @@ public class BaseUiTest {
     public void createWebDrivers(ITestContext iTestContext) {
         // If base url is not set, default to prod url
         if (System.getProperty(SystemPropertyNames.BASE_UI_URL) == null) {
-            System.setProperty(SystemPropertyNames.BASE_UI_URL, "");
+            System.setProperty(SystemPropertyNames.BASE_UI_URL, "https://strypes.eu/");
         }
 
         // If browser type is not set, default to Chrome
         if (System.getProperty(SystemPropertyNames.BROWSER_TYPE) == null) {
-            System.setProperty(SystemPropertyNames.BROWSER_TYPE, BrowserTypeEnumDriverManager.EDGE.name());
+            System.setProperty(SystemPropertyNames.BROWSER_TYPE, BrowserTypeEnumDriverManager.CHROME.name());
         }
 
         // Get and store the browser type
